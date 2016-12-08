@@ -22,11 +22,34 @@ angular.module("pianoApp")
         }
 
 
-
+// THIS IS THE ORIGINAL SOUND
         var piano = new Wad(Wad.presets.piano)
 
         $scope.play = function(note){
             piano.play({pitch:note})
+            $scope.active[note] = true
+        }
+
+
+// THIS IS WHAT WE'RE GOING TO CALL THE OSCILATOR
+        var oscilator = new Wad(Wad.presets.ghost)
+
+        $scope.oscilateAway = function(note) {
+            oscilator.play({pitch:note})
+            $scope.active[note] = true
+        }
+
+        // $scope.makeOscilator = function() {
+        //     console.log("you made an oscilator")
+
+        // }
+
+
+// THIS IS WHAT WE'RE GOING TO CALL THE FILTER
+        var filter = new Wad(Wad.presets.hiHatOpen)
+
+        $scope.filterAway = function(note){
+            filter.play({pitch:note})
             $scope.active[note] = true
         }
 
@@ -36,7 +59,7 @@ angular.module("pianoApp")
 
         $scope.snare = function(){
 // how to get it to NOT play a:440
-            snare.play({volume: 0.001 })
+            snare.play({volume: 0.0001 })
             console.log("this should make no sound")
         }
 
@@ -114,9 +137,15 @@ angular.module("pianoApp")
                     pitch = 'C5';
                     break;
 
+                // case 20:
+                //     if(down) {
+                //         $scope.oscilateAway()
+                //     }
+
                 default:
                     if(down) {
                     $scope.snare()
+
                 }
                     break;
 
