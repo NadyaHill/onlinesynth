@@ -1,0 +1,212 @@
+h1 {
+	font-family: 'Aldrich', sans-serif;
+	color: white;
+  font-size: 40px;
+/*  text-transform: uppercase;*/
+}
+
+body {
+  margin: 20px;
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+#moog { 
+  font-family: 'Aldrich', sans-serif;
+  font-weight:100; 
+  text-align: center;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 2rem;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  float: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 300px;
+  background: linear-gradient(to right, black, #40424A, #4A494F, black);
+}
+
+#moog h1 {
+  font-size: 45px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.moogInner {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.whiteLine {
+  background-color: white;
+  height: 2px;
+}
+
+.twoSides {
+  display: flex;
+}
+
+/*.box {
+  width: 200px;
+}*/
+
+.leftSide {
+  flex: 1;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.rightSide {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.space{
+  height: 20px;
+}
+
+
+
+
+.keys {
+  padding: 5px;
+  margin-right: 5px;
+  position: relative;
+  font-family: "Sue Ellen Francisco";
+  text-align: center;
+  height: 100px;
+}
+
+
+.keys :hover {
+  background-color: grey;
+}
+
+
+.whiteKey {
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  height: 100px;
+  width: 20px;
+  line-height: 500px;
+  vertical-align: bottom;
+  box-shadow: 5px 5px 2.5px black;
+}
+
+
+.blackKey {
+  position: absolute;
+  z-index: 1;
+  margin-left: -22px;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 5px;
+  height: 65px;
+  width: 18px;
+  line-height: 300px;
+  vertical-align: bottom;
+  box-shadow: 5px 5px 2.5px #474747;
+}
+
+.colorChange {
+  background-color: grey;
+}
+
+
+
+
+
+
+/*BLUE SWITCH*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox, keep spacebar from interacting */
+.switch input {display:none;}
+
+/* slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0476C8;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: lightblue;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+
+
+/*#moog button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+
+#moog button:hover { 
+   background: rgba(0,0,0,0.5);
+}*/
+
+
+
+/*@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}*/
+
+/*@media screen and (max-device-width: 800px) {
+  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}*/
