@@ -23,15 +23,6 @@ angular.module("pianoApp")
 
 
 
-        // $scope.playedNotes = []
-        // $http.get("http://localhost:4000/melody") 
-        //     .then(function (data) {
-        //         console.log(data)
-        //         $scope.melodies = data.data
-        //     })
-
-
-
         var piano = new Wad(Wad.presets.piano)
 
         $scope.play = function(note){
@@ -40,11 +31,11 @@ angular.module("pianoApp")
         }
 
 
-        // removing the pitch from non-keyboard strokes
+// removing the pitch from non-keyboard strokes
         var snare = new Wad(Wad.presets.snare)
 
         $scope.snare = function(){
-            // how to get it to NOT play a:440
+// how to get it to NOT play a:440
             snare.play({volume: 0.001 })
             console.log("this should make no sound")
         }
